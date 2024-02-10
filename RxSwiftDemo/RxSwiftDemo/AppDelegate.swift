@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupWindow(){
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
-        let VC = SubjectVC()
+        let VC = FoodListVC()
         let navC = UINavigationController(rootViewController: VC)
         window.rootViewController = navC
         self.window?.makeKeyAndVisible()

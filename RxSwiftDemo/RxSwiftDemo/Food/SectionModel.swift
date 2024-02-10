@@ -11,14 +11,23 @@ import RxCocoa
 import RxDataSources
 
 
-struct FoodSectionModel{
+struct SectionModel{
     var header:String 
-    var items:[FoodModel]
+    var items:[Food]
 }
 
-extension FoodSectionModel:SectionModelType{
-    init(original: FoodSectionModel, items: [FoodModel]) {
+//extension SectionModel:SectionModelType{
+//    init(original: SectionModel, items: [Food]) {
+//        self = original
+//        self.items = items
+//    }
+//}
+
+extension SectionModel: SectionModelType{
+    init(original: SectionModel, items: [Food]) {
         self = original
         self.items = items
     }
+    
+    
 }

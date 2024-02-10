@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FoodModel{
+struct Food{
     var name:String = ""
     var imageNmae:String = ""
 }

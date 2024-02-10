@@ -14,13 +14,14 @@ class AViewController:UIViewController{
     
     let cellId = "ViewControllerCell"
     
-    static var item1:String = "Item 1"
-    static var item2:String = "Item 2"
-    static var item3:String = "Item 3"
-    static var item4:String = "Item 4"
+//    static var item1:String = "Item 1"
+//    static var item2:String = "Item 2"
+//    static var item3:String = "Item 3"
+//    static var item4:String = "Item 4"
     
-    var tableViewItems = Observable.just([AViewController.item1, AViewController.item2, AViewController.item3, AViewController.item4])
+    var tableViewItems = Observable.just(["Item 1", "Item 2", "Item 3", "Item 4"])
     let disposeBag = DisposeBag()
+    
     
     
     lazy var tableview: UITableView = {
@@ -36,6 +37,10 @@ class AViewController:UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(tableview)
+        
+//        Observable.create { observer in
+//
+//        }
         
         
         tableview.frame = CGRectMake(0, CALength.kNavStatusBarHeight, CALength.kScreenWidth, CALength.kScreenHeight -  CALength.kNavStatusBarHeight)
@@ -68,8 +73,54 @@ class AViewController:UIViewController{
             }
         }.disposed(by: disposeBag)
     }
-    
-    
-    
+}
 
+public protocol TestProtocol {
+    associatedtype Element
+//    var age:Element {get set}
+    func test1(paramas:Element)
+}
+
+//方式1: 直接typealias起别名
+class TestClass : TestProtocol{
+    typealias Element = Int
+
+    func test1(paramas: Element) {
+
+    }
+}
+
+//方式2:直接定义Class中定义泛型
+class Test2Class<Element> : TestProtocol{
+    func test1(paramas: Element) {
+
+    }
+}
+
+//方式3-1 在fun函数 或者 age属性中声明
+class Tes3Class: TestProtocol{
+    func test1(paramas: String) {
+        
+    }
+}
+
+public protocol TestProtocol1 {
+    associatedtype Element
+    var age:Element {get set}
+    func test1(paramas:String)
+}
+
+
+//方式3-2 在fun函数 或者 age属性中声明
+class Tes4Class: TestProtocol1{
+    
+    var age: String{
+        get{
+            return "1"
+        }
+        set{}
+    }
+    
+    func test1(paramas: String) {
+    }
 }
