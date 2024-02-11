@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
+import SnapKit
 
 class AViewController:UIViewController{
     
@@ -21,6 +22,7 @@ class AViewController:UIViewController{
     
     var tableViewItems = Observable.just(["Item 1", "Item 2", "Item 3", "Item 4"])
     let disposeBag = DisposeBag()
+    
     
     
     
@@ -44,6 +46,10 @@ class AViewController:UIViewController{
         
         
         tableview.frame = CGRectMake(0, CALength.kNavStatusBarHeight, CALength.kScreenWidth, CALength.kScreenHeight -  CALength.kNavStatusBarHeight)
+        
+        tableview.snp.makeConstraints { make in
+            
+        }
         self.view.backgroundColor = .yellow
         
         tableViewItems.bind(to: tableview
