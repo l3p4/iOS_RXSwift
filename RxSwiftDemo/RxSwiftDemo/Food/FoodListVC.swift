@@ -96,7 +96,9 @@ class FoodListVC:UIViewController{
                 
             }
 //        btn.rx.isEnabled
-        UISwitch().rx.value.asObservable()
+//        UISwitch().rx.value.asObservable().
+        
+//        Observable.of(1,2).flatMap(<#T##selector: (Int) throws -> ObservableConvertibleType##(Int) throws -> ObservableConvertibleType#>)
         
         
         

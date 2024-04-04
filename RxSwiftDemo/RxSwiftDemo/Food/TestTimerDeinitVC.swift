@@ -12,29 +12,27 @@ import UIKit
 class TestTimerDeinitVC:UIViewController{
     
     deinit{
-        print("TestTimerDeinitVC deinit")
+        //deinit中记得销毁,如果有其他地方手动销毁也调用invalidate
         timer?.invalidate()
     }
-    
-    lazy var timer:Timer = {
-//        var timer1 = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(testTimer(timer:)), userInfo: nil, repeats: true)
-        var timer:Timer? = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: {[weak self] timer in
-//            print(222)
-            self?.testTimer(timer: timer)
-        })
-        RunLoop.main.add(timer, forMode: .default)
-        return timer
-    }()
+    //1.定义一个可选类型的timer
+    var timer:Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .gray
+        //2.用闭包创建timer,并添加到defaultRunLoop中, self记得用weak
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: {[weak self] timer in
+                        self?.testTimer(timer: timer)
+                    })
         
-        self.timer.fire()
+        if let timer1 = timer{
+            RunLoop.main.add(timer1, forMode: .default)
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        timer.invalidate()
+        timer?.invalidate()
     }
     
     @objc func testTimer(timer:Timer)  {
