@@ -143,6 +143,9 @@ class FoodListVC:UIViewController{
         
         self.view.addSubview(searchBar)
         searchBar.frame = CGRectMake(0, CALength.kNavStatusBarHeight, CALength.kScreenWidth, 44)
+        searchBar.snp.makeConstraints { make in
+            
+        }
         
         
         
