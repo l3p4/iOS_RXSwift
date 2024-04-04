@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0A59B72BBE8290003C83D3 /* TestTimerDeinitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A59B62BBE8290003C83D3 /* TestTimerDeinitVC.swift */; };
 		55D719B03C717696D9DBF96A /* Pods_RxSwiftDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D30505FBD134F5C9D8183A /* Pods_RxSwiftDemoTests.framework */; };
 		84C2412294B85BF2906EB328 /* Pods_RxSwiftDemo_RxSwiftDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 830F40434F994BB7FF022ABF /* Pods_RxSwiftDemo_RxSwiftDemoUITests.framework */; };
 		F4659CD52B65170300141B09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4659CD42B65170300141B09 /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A0A59B62BBE8290003C83D3 /* TestTimerDeinitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTimerDeinitVC.swift; sourceTree = "<group>"; };
 		129EFC4DB517C552CE8B12D3 /* Pods-RxSwiftDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftDemoTests/Pods-RxSwiftDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1914832582D90970FB7E567E /* Pods-RxSwiftDemo-RxSwiftDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemo-RxSwiftDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftDemo-RxSwiftDemoUITests/Pods-RxSwiftDemo-RxSwiftDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		36D04ED59B424B1D21C6355F /* Pods-RxSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftDemo/Pods-RxSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				F4659D1F2B66B44200141B09 /* SectionModel.swift */,
 				F4659D1B2B66AAC800141B09 /* FoodListVC.swift */,
 				F4659D1D2B66AADC00141B09 /* FoodDetailVC.swift */,
+				0A0A59B62BBE8290003C83D3 /* TestTimerDeinitVC.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				F4659D1E2B66AADC00141B09 /* FoodDetailVC.swift in Sources */,
 				F4659D172B66A91400141B09 /* EnglishWord.swift in Sources */,
 				F4659D092B65179700141B09 /* CALength.swift in Sources */,
+				0A0A59B72BBE8290003C83D3 /* TestTimerDeinitVC.swift in Sources */,
 				F4659D1A2B66AAB700141B09 /* Food.swift in Sources */,
 				F4659D082B65179700141B09 /* UIView+Frame.swift in Sources */,
 				F4659CD92B65170300141B09 /* ViewController.swift in Sources */,

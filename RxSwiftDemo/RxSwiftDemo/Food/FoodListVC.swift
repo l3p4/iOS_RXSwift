@@ -13,13 +13,17 @@ import RxDataSources
 
 class FoodListVC:UIViewController{
     
+    
+    
+
+    
     let cellId = "ViewControllerCell"
     
     static var item1:String = "image_1"
     static var item2:String = "image_2"
     static var item3:String = "image_3"
     
-    
+  
     
 //    let tableViewItems:BehaviorRelay = BehaviorRelay.init(value:
 //        [Food(name:"Piza",imageNmae: "image_1"),
@@ -133,6 +137,10 @@ class FoodListVC:UIViewController{
                 
             )
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        navigationController?.pushViewController(TestTimerDeinitVC(), animated: true)
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -147,6 +155,7 @@ class FoodListVC:UIViewController{
             
         }
         
+       
         
         
         
