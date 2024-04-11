@@ -21,7 +21,7 @@ class AViewController:UIViewController{
 //    static var item4:String = "Item 4"
     
     var tableViewItems = Observable.just(["Item 1", "Item 2", "Item 3", "Item 4"])
-    let disposeBag = DisposeBag()
+//    let disposeBag = DisposeBag()
     
     
     
